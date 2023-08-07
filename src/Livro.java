@@ -2,7 +2,7 @@ public class Livro {
     
     String nome;
     String descricao;
-    double valor;
+    private double valor;
     String isbn;
     Autor autor;
 
@@ -31,6 +31,14 @@ public class Livro {
         }
         this.valor -= this.valor * porcentagem;
         return true;
+    }
+
+    void adicionarValor(double valor) {
+        this.valor = valor;
+    }
+
+    double retornaValor() {
+        return this.valor;
     }
 
     boolean temAutor() {

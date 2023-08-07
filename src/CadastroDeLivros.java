@@ -8,14 +8,14 @@ public class CadastroDeLivros {
         Livro livro1 = new Livro();
         livro1.nome = "Yaguera, a origem";
         livro1.descricao ="A origem do universo como conhecemos.";
-        livro1.valor = 79.90;
+        livro1.adicionarValor(79.90);
         livro1.isbn = "978-85-66250-23-0";
 
         livro1.autor = autor1;
         if(!livro1.aplicaDescontoDe(0.1)) {
             System.out.println("Desconto não pode ser maior do que 30%");
         } else{
-            System.out.println("Valor com desconto: " + livro1.valor);
+            System.out.println("Valor com desconto: " + livro1.retornaValor());
         }
         livro1.mostrarDetalhes();
 
@@ -27,14 +27,14 @@ public class CadastroDeLivros {
         Livro livro2 = new Livro();
         livro2.nome = "Yaguera, a queda do caranguejo";
         livro2.descricao ="Ascenção e declinio do imperio Caranguejal";
-        livro2.valor = 89.90;
+        livro2.adicionarValor(89.90);
         livro2.isbn = "978-15-76250-23-0";
 
         livro2.autor = autor2;
         if(!livro2.aplicaDescontoDe(0.5)) {
             System.out.println("Desconto não pode ser maior do que 30%");
         } else{
-            System.out.println("Valor com desconto: " + livro2.valor);
+            System.out.println("Valor com desconto: " + livro2.retornaValor());
         }
         livro2.mostrarDetalhes();
 
