@@ -12,7 +12,11 @@ public class CadastroDeLivros {
         livro1.isbn = "978-85-66250-23-0";
 
         livro1.autor = autor1;
-
+        if(!livro1.aplicaDescontoDe(0.1)) {
+            System.out.println("Desconto não pode ser maior do que 30%");
+        } else{
+            System.out.println("Valor com desconto: " + livro1.valor);
+        }
         livro1.mostrarDetalhes();
 
         Autor autor2 = new Autor();
@@ -27,7 +31,12 @@ public class CadastroDeLivros {
         livro2.isbn = "978-15-76250-23-0";
 
         livro2.autor = autor2;
-        livro2.aplicaDescontoDe(0.5);
+        if(!livro2.aplicaDescontoDe(0.5)) {
+            System.out.println("Desconto não pode ser maior do que 30%");
+        } else{
+            System.out.println("Valor com desconto: " + livro2.valor);
+        }
         livro2.mostrarDetalhes();
+
     }
 }

@@ -25,8 +25,12 @@ public class Livro {
         System.out.println("Novo Livro Cadastrado.");
     }
 
-    public void aplicaDescontoDe(double porcentagem) {
+    public boolean aplicaDescontoDe(double porcentagem) {
+        if(porcentagem > 0.3) {
+            return false;
+        }
         this.valor -= this.valor * porcentagem;
+        return true;
     }
 
     boolean temAutor() {
