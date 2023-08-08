@@ -2,9 +2,10 @@ public class Livro {
     
     private String nome;
     private String descricao;
-    private double valor;
+    protected double valor;
     private String isbn;
     private Autor autor;
+    private boolean impresso;
 
     void mostrarDetalhes(){
         System.out.println("--Detalhes do Livro--");
@@ -24,6 +25,7 @@ public class Livro {
     public Livro( Autor autor) {
         this.autor = autor;
         this.isbn = "000-00-00000-00-0";
+        this.impresso = true;
         System.out.println("Novo Livro Cadastrado.");
     }
 
@@ -67,6 +69,13 @@ public class Livro {
         this.autor = autor;
     }
 
+    public boolean isImpresso() {
+        return impresso;
+    }
+
+    public void setImpresso(boolean impresso) {
+        this.impresso = impresso;
+    }
 
     public boolean aplicaDescontoDe(double porcentagem) {
         if(porcentagem > 0.3) {
@@ -76,8 +85,8 @@ public class Livro {
         return true;
     }
 
-
     boolean temAutor() {
         return this.autor != null;
     }
+
 }

@@ -37,6 +37,18 @@ public class CadastroDeLivros {
             System.out.println("Valor com desconto: " + livro2.getValor());
         }
         livro2.mostrarDetalhes();
+        
+        Ebook ebook = new Ebook(autor2);
+        ebook.setNome("Yaguera, a queda do caranguejo"); 
+        ebook.setDescricao("Ascenção e declinio do imperio Caranguejal");
+        ebook.setValor(49.90);
+        ebook.setIsbn("978-15-76250-23-0");
+        if(!ebook.aplicaDescontoDe(0.15)) {
+            System.out.println("Desconto não pode ser maior do que 15%");
+        } else{
+            System.out.println("Valor com desconto: " + ebook.getValor());
+        }
+        ebook.mostrarDetalhes();
 
     }
 }
