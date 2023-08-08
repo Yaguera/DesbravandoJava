@@ -20,6 +20,12 @@ public class Livro {
         System.out.println("--");
         
     }
+    
+    public Livro( Autor autor) {
+        this.autor = autor;
+        this.isbn = "000-00-00000-00-0";
+        System.out.println("Novo Livro Cadastrado.");
+    }
 
     public void setValor(double valor) {
         this.valor = valor;
@@ -61,9 +67,6 @@ public class Livro {
         this.autor = autor;
     }
 
-    public Livro() {
-        System.out.println("Novo Livro Cadastrado.");
-    }
 
     public boolean aplicaDescontoDe(double porcentagem) {
         if(porcentagem > 0.3) {
