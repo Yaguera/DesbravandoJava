@@ -2,7 +2,7 @@ public class Livro {
     
     private String nome;
     private String descricao;
-    protected double valor;
+    private double valor;
     private String isbn;
     private Autor autor;
     private boolean impresso;
@@ -18,7 +18,7 @@ public class Livro {
         } else {
             System.out.println("Autoria Desconhecida.");
         }
-        System.out.println("--");
+        System.out.println("--------------------------------------------------------");
         
     }
     
